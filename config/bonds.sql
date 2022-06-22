@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 20, 2022 at 06:53 AM
+-- Generation Time: Jun 22, 2022 at 04:13 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.6
 
@@ -126,33 +126,8 @@ INSERT INTO `covidcases` (`date`, `new`, `active`, `recover`) VALUES
 ('2022-06-19', 0, 7, 0),
 ('2022-06-20', 2, 7, 2),
 ('2022-06-21', 7, 9, 5),
-('2022-06-22', 8, 16, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `report`
---
-
-CREATE TABLE `report` (
-  `report_id` int(11) NOT NULL,
-  `reporter_unit` varchar(20) NOT NULL,
-  `report_type` varchar(20) NOT NULL,
-  `report_for_status` varchar(30) NOT NULL,
-  `evidence` varchar(500) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `covidreport`
---
-
-INSERT INTO `report` (`report_id`, `reporter_unit`, `report_type`, `report_for_status`, `evidence`, `date`) VALUES
-(101, 'A-5-09', 'vaccine', '2nd Dose', 'assets/images/pcrtest.jpg', '2022-06-21'),
-(102, 'B-4-14', 'vaccine', '1st Dose', 'assets/images/pcrtest.jpg', '2022-06-21'),
-(103, 'D-3-33', 'covid', 'Positive', 'assets/images/pcrtest.jpg', '2022-06-21'),
-(105, 'D-4-04', 'covid', 'Positive', 'assets/images/pcrtest.jpg', '2022-06-22'),
-(106, 'A-5-05', 'covid', 'Negative', 'assets/images/pcrtest.jpg', '2022-06-22');
+('2022-06-22', 8, 16, 1),
+('2022-06-23', 0, 16, 0);
 
 -- --------------------------------------------------------
 
@@ -203,6 +178,32 @@ INSERT INTO `explore` (`facility_addr`, `facility_name`, `facility_type`, `opera
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `report`
+--
+
+CREATE TABLE `report` (
+  `report_id` int(11) NOT NULL,
+  `reporter_unit` varchar(20) NOT NULL,
+  `report_type` varchar(20) NOT NULL,
+  `report_for_status` varchar(30) NOT NULL,
+  `evidence` varchar(500) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `report`
+--
+
+INSERT INTO `report` (`report_id`, `reporter_unit`, `report_type`, `report_for_status`, `evidence`, `date`) VALUES
+(101, 'A-5-09', 'vaccine', '2nd Dose', 'assets/images/pcrtest.jpg', '2022-06-21'),
+(102, 'B-4-14', 'vaccine', '1st Dose', 'assets/images/pcrtest.jpg', '2022-06-21'),
+(103, 'D-3-33', 'covid', 'Positive', 'assets/images/pcrtest.jpg', '2022-06-21'),
+(105, 'D-4-04', 'covid', 'Positive', 'assets/images/pcrtest.jpg', '2022-06-22'),
+(106, 'A-5-05', 'covid', 'Negative', 'assets/images/pcrtest.jpg', '2022-06-22');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resident`
 --
 
@@ -228,14 +229,14 @@ CREATE TABLE `resident` (
 --
 
 INSERT INTO `resident` (`ic`, `name`, `dob`, `gender`, `race`, `contact`, `emergency_contact`, `email`, `check_in_date`, `profile_pic`, `covid_status`, `password`, `vaccine_status`, `rental_status`) VALUES
-('010101-01-0111', 'Mikasa ', '2001-01-01', 'Other', 'Other', '011-1100110', '011-0011001', 'mikasa@aot.com', '2022-06-15 17:43:28', 'assets/images/defaultProPic.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', 'Not Vaccinated At All', 'renting'),
+('010101-01-0111', 'Mikasa ', '2001-01-01', 'Other', 'Other', '011-1100110', '011-0011001', 'mikasa@aot.com', '2022-06-15 17:43:28', 'assets/images/defaultProPic.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', 'Not Vaccinated At All', 'request to stop'),
 ('010201-04-0201', 'Yan Tze ', '2001-02-01', 'Female', 'Chinese', '014-9846555', '014-9846555', 'yantze@aot.com', '2022-06-15 19:43:28', 'assets/images/defaultProPic.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', 'Not Vaccinated At All', 'renting'),
 ('010305-07-0305', 'Siti Hatizah', '2001-03-05', 'Female', 'Malay', '017-5435454', '017-5435454', 'sthatizah@hotmail.com', '2022-06-15 17:35:29', 'assets/images/defaultProPic.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '3rd Dose (Booster)', 'renting'),
 ('010307-07-0307', 'Kanegeswaran Sivam', '2001-03-07', 'Male', 'Indian', '014-9885454', '014-9885454', 'geswaran@gmail.com', '2022-05-09 06:45:14', 'assets/images/profile-image.png', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '1st Dose', 'renting'),
 ('010606-06-0899', 'Fatimah Moo', '2001-06-06', 'Female', 'Malay', '011-6600889', '011-9988006', 'fatimah@hotmail.com', '2022-06-15 17:44:29', 'assets/images/defaultProPic.jpg', 'Negative', 'ee63700a92c5b6a61802e226ed995c05', '3rd Dose (Booster)', 'renting'),
-('010616-14-1303', 'Lei Zhi Guang', '2001-06-16', 'Male', 'Chinese', '013-6247251', '016-6030616', 'leizhiguang1@gmail.com', '2022-05-09 04:45:14', 'assets/images/profile-image.png', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '1st Dose', 'request to stop'),
+('010616-14-1303', 'Lei Zhi Guang', '2001-06-16', 'Male', 'Chinese', '013-6247251', '016-6030616', 'leizhiguang1@gmail.com', '2022-05-09 04:45:14', 'assets/images/profile-image.png', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '1st Dose', 'renting'),
 ('1', 'Kudou Shinyii', '2012-05-01', 'Male', 'Malay', '012-0501001', '012-0501002', 'shinyi@conan.com', '2022-05-28 08:48:04', 'assets/images/conan.jpg', 'Positive', 'c4ca4238a0b923820dcc509a6f75849b', 'Not Vaccinated At All', 'renting'),
-('11', 'Ms Water', '2022-06-29', 'Female', 'Chinese', '01256789', '1241241524', 'water@earth.com', '2022-06-18 00:37:59', 'assets/images/cb08f82a6b15af05987d3452020e8ab4.jpg', 'Positive', '9460370bb0ca1c98a779b1bcc6861c2c', '2nd Dose', 'renting'),
+('11', 'Ms Water', '2022-06-29', 'Female', 'Chinese', '01256789', '1241241524', 'water@earth.com', '2022-06-18 00:37:59', 'assets/images/cb08f82a6b15af05987d3452020e8ab4.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '2nd Dose', 'request to stop'),
 ('2', 'Kobe Bryant', '2022-05-28', 'Male', 'Malay', '011-1111111', '012-2222222', 'kobe@lakers.com', '2022-05-28 08:48:04', 'assets/images/kobe.jpg', 'Negative', 'c81e728d9d4c2f636f067f89cc14862c', '1st Dose', 'renting'),
 ('4', 'Zhang Ji Ke', '2022-05-28', 'Male', 'Chinese', '880-3219019', '880-9273012', 'zhangjike@butterfly.com', '2022-05-28 08:48:04', 'assets/images/zhangjike.png', 'Negative', 'a87ff679a2f3e71d9181a67b7542122c', '3rd Dose (Booster)', 'request to stop'),
 ('681225-09-8263', 'Ms Five', '1968-12-25', 'Female', 'Indian', '012-2502111', '012-1125021', 'samantha@outlook.com', '2022-06-16 22:39:03', 'assets/images/defaultProPic.jpg', 'Negative', 'ee63700a92c5b6a61802e226ed995c05', '3rd Dose (Booster)', 'renting'),
@@ -245,7 +246,7 @@ INSERT INTO `resident` (`ic`, `name`, `dob`, `gender`, `race`, `contact`, `emerg
 ('840702-07-4555', 'John Rambo', '1984-07-02', 'Male', 'Indian', '013-9939993', '013-9939993', 'shoot@guns.com', '2022-06-16 21:39:03', 'assets/images/defaultProPic.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '3rd Dose (Booster)', 'renting'),
 ('880904-01-0433', 'Barry Allen', '1988-09-04', 'Male', 'Malay', '012-3434333', '012-3434333', 'flash@justice.com', '2022-06-15 13:51:33', 'assets/images/defaultProPic.jpg', 'Negative', 'ee63700a92c5b6a61802e226ed995c05', '2nd Dose', 'renting'),
 ('910405-07-0405', 'Uzumaki Naruto', '1991-04-05', 'Male', 'Chinese', '017-7756666', '017-7756666', 'fourth@hokage.com', '2022-05-28 09:58:04', 'assets/images/conan.jpg', 'Positive', 'c4ca4238a0b923820dcc509a6f75849b', 'Not Vaccinated At All', 'renting'),
-('910408-07-0405', 'Steve Apple', '1991-04-08', 'Male', 'Other', '011-1231231', '011-123123', 'maker@apple.com', '2022-06-18 02:37:59', 'assets/images/cb08f82a6b15af05987d3452020e8ab4.jpg', 'Positive', '9460370bb0ca1c98a779b1bcc6861c2c', '2nd Dose', 'renting'),
+('910408-07-0405', 'Steve Apple', '1991-04-08', 'Male', 'Other', '011-1231231', '011-123123', 'maker@apple.com', '2022-06-18 02:37:59', 'assets/images/cb08f82a6b15af05987d3452020e8ab4.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '2nd Dose', 'renting'),
 ('920501-02-0521', 'Zhing Yi ', '1992-05-01', 'Female', 'Chinese', '012-1133311', '012-1133311', 'zhingyi@aot.com', '2022-06-15 18:43:28', 'assets/images/defaultProPic.jpg', 'Negative', 'ee63700a92c5b6a61802e226ed995c05', 'Not Vaccinated At All', 'renting'),
 ('920621-01-3427', 'Chewbacca Wookie', '1992-06-21', 'Male', 'Other', '011-2342333', '011-2342333', 'rawr@starwars.com', '2022-06-15 21:08:32', 'assets/images/defaultProPic.jpg', 'Positive', 'ee63700a92c5b6a61802e226ed995c05', '3rd Dose (Booster)', 'renting'),
 ('930405-03-0955', 'Ryan Renolds', '1993-04-05', 'Male', 'Malay', '019-9898877', '019-9898877', 'deadpool@marvel.com', '2022-05-28 12:48:04', 'assets/images/kobe.jpg', 'Negative', 'c81e728d9d4c2f636f067f89cc14862c', '1st Dose', 'renting'),
@@ -423,16 +424,16 @@ ALTER TABLE `covidcases`
   ADD PRIMARY KEY (`date`);
 
 --
--- Indexes for table `report`
---
-ALTER TABLE `report`
-  ADD PRIMARY KEY (`report_id`);
-
---
 -- Indexes for table `explore`
 --
 ALTER TABLE `explore`
   ADD PRIMARY KEY (`facility_addr`);
+
+--
+-- Indexes for table `report`
+--
+ALTER TABLE `report`
+  ADD PRIMARY KEY (`report_id`);
 
 --
 -- Indexes for table `resident`
