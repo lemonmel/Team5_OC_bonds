@@ -120,32 +120,6 @@ function updateCovidCase($condition){
     
 }
 
-function addNew(){
-    //add a 'new' covid case
-    $todayDate = date("Y-m-d");
-    $update_query = mysqli_query(connection(),"UPDATE covidcases SET new = new + 1 WHERE date='$todayDate'");
-}
-
-function addRecover(){
-    $todayDate = date("Y-m-d");
-    $update_query = mysqli_query(connection(),"UPDATE covidcases SET recover = recover + 1 WHERE date='$todayDate'");
-
-}
-
-function updateActive($value){
-    if($value=='+'){
-        //add active
-    }else if($value=='-'){
-        //minus active case
-    }
-}
-
-function getYesterdayActive(){
-    $yesterday = getDateNow(-1,"days","'d M Y'");
-    $query = mysqli_query(connection(),"SELECT activeCases FROM covidcases WHERE date='$yesterday'");
-    return $query[0];
-}
-
 ?>
 
                         <div class="col-12 mycontainer">
