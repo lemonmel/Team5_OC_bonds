@@ -21,11 +21,11 @@ If you would accidentally changed and forgot the password, you can change one of
 
 #Screenshots: <br>
 Login Page <br>
-<img width="1440" alt="Screenshot 2023-07-26 at 1 22 31 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/01bb9ab6-9cb5-4fd6-ad85-87979bc23b25"> 
+<img width="720" alt="Screenshot 2023-07-26 at 1 22 31 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/01bb9ab6-9cb5-4fd6-ad85-87979bc23b25"> 
 
 Resident Page <br>
-<img width="1440" alt="Screenshot 2023-07-26 at 1 23 10 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/644160cc-55a4-4aac-8148-9e3236c4040b">
+<img width="720" alt="Screenshot 2023-07-26 at 1 23 10 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/644160cc-55a4-4aac-8148-9e3236c4040b">
 
 Admin Page <br>
-<img width="1440" alt="Screenshot 2023-07-26 at 1 23 30 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/2057efe3-0a71-4aeb-b01a-51d5c34b5484">
+<img width="720" alt="Screenshot 2023-07-26 at 1 23 30 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/2057efe3-0a71-4aeb-b01a-51d5c34b5484">
 
