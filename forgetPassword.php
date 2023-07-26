@@ -29,27 +29,25 @@ if($check_login_query == 1) {
         var recipientName = '<?php echo $name ?>';
         var tempPass = '<?php echo $temp ?>';
         var oriPass = '<?php echo $oriPass ?>';
-        var data = {
-            service_id: 'bondsService',
-            template_id: 'verificationEmail',
-            user_id: '4R4tjUWwsWbbfoi8W',
-            template_params: {
-                'from_name':"bonds",
-                'to_name': recipientName,
-                'message': 'Your new temporary password is been reset to :'+oriPass,
-                'email': recipientMail
-            }
+        (function() {
+            emailjs.init('wkWBWZfzXNOTK2cig'); //please encrypted user id for malicious attacks
+        })();
+        //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+        var templateParams = {
+            to_name: recipientName,
+            from_name: "bonds",
+            message: 'Your new temporary password is been reset to :' + oriPass,
+            email: recipientMail
         };
-        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-            type: 'POST',
-            data: JSON.stringify(data),
-            contentType: 'application/json'
-        }).done(function() {
-            message => console.log(message)
-        }).fail(function(error) {
-            console.log(JSON.stringify(error))
-        }); </script>
-        <?php echo "
+
+        emailjs.send('bonds_service', 'verificationEmail', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    </script>
+    <?php echo "
         <div id='alert-modal' tabindex='-1' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered'>
             <div class='modal-content'>
@@ -60,9 +58,11 @@ if($check_login_query == 1) {
         </div>
     </div>
         " ?>
-        <script> setTimeout(function(){ window.location="index.php";}, 3000);
-        
-      </script>
+    <script>
+        setTimeout(function() {
+            window.location = "index.php";
+        }, 3000);
+    </script>
 <?php
         }else { echo "<div id='alert-modal' tabindex='-1' aria-hidden='true'>
             <div class='modal-dialog modal-dialog-centered'>
