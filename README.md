@@ -26,7 +26,9 @@ Login Page <br>
 
 Resident Page <br>
 <img width="720" alt="Screenshot 2023-07-26 at 1 23 10 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/644160cc-55a4-4aac-8148-9e3236c4040b">
+<img width="720" alt="Screenshot 2023-07-26 at 1 29 12 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/b485d88e-27ba-474f-a199-21c8c845a018">
 
 Admin Page <br>
 <img width="720" alt="Screenshot 2023-07-26 at 1 23 30 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/2057efe3-0a71-4aeb-b01a-51d5c34b5484">
+<img width="720" alt="Screenshot 2023-07-26 at 1 28 34 PM" src="https://github.com/lemonmel/Team5_OC_bonds/assets/76807277/3b19e326-d0be-4bd0-b585-62825b847a09">
 
