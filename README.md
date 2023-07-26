@@ -11,13 +11,14 @@ The project is about a online community system in a condominium neighbourhood. I
 - Admin: to allow admin manage users and validate covid 19 report <br>
 
 #To Open It: <br>
+The project is run by using XAMPP. <br>
 Go to phpmyadmin SQL and create a database called 'bonds', then click insert and select the bonds.sql inside config folder
 Change the database username and password inside config.php
 
 #Login details: <br>
 Admin: Login ID: 111, Password:111 <br>
 Resident: Login ID: 010616-14-1303, password: bonds <br>
-If you would accidentally changed and forgot the password, you can change one of the account email with your email in database and our system will send you a temporary password to login :D
+If you would accidentally changed and forgot the password, you can change one of the account email with your email in database or by using admin page. By clicking forget password in login page, a temporary password will be set and send to the registered email.
 
 #Screenshots: <br>
 Login Page <br>
